@@ -46,6 +46,6 @@ public class Calculator {
             }
         }
 
-        System.out.println("Result: " + res);//почему-то при компиляции меня отругали за кириллицу именно в этом месте
+        System.out.println("Result: " + res);
     }
 }
