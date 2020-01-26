@@ -34,7 +34,7 @@ public class Main {
         }
 
         if(canBuyAnything == false) {
-            System.out.println("Недостаточно средств :( Изучайте Java и зарабатывайте много :)");
+            System.out.println("no money :)");
         }
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd_HHmmss");
