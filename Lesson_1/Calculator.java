@@ -39,7 +39,7 @@ public class Calculator {
         } else if (inZnak.equals("/")) {
             res = inFirst / inSecond;
         } else if (inZnak.equals("%")) {
-            res = inFirst / inSecond;
+            res = inFirst % inSecond;
         } else {
             for (int i = 1; i <= inSecond; i++) {
                 res = res * inFirst;
