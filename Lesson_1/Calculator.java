@@ -17,7 +17,7 @@ public class Calculator {
             inFirst = in.nextInt();
         }
 
-        //Пока не введем нужный знак... намучился с сравнением строк...
+        //Пока не введем нужный знак... 
         while(!inZnak.equals("+") && !inZnak.equals("-") && !inZnak.equals("*")
                 && !inZnak.equals("/") && !inZnak.equals("%") && !inZnak.equals("^")){
             System.out.print("enter a sign + - * / % or ^: ");
