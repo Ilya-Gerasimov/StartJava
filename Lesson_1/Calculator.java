@@ -7,27 +7,25 @@ public class Calculator {
         int inFirst = -1, inSecond = -1, res = 1;;
         String inZnak = "p";
 
-        System.out.println("Калькулятор целых положительных чисел");
-
         Scanner in = new Scanner(System.in);
         Scanner in2 = new Scanner(System.in);
         Scanner ch = new Scanner(System.in);
 
         //Пока не введем положительное число будем повторять ввод (проверку на то, что число целое так и не сделал)
         while(inFirst<=0){
-            System.out.print("Введите первое число: ");
+            System.out.print("enter the first figure: ");
             inFirst = in.nextInt();
         }
 
         //Пока не введем нужный знак... намучился с сравнением строк...
         while(!inZnak.equals("+") && !inZnak.equals("-") && !inZnak.equals("*")
                 && !inZnak.equals("/") && !inZnak.equals("%") && !inZnak.equals("^")){
-            System.out.print("Введите знак + - * / % или ^: ");
+            System.out.print("enter a sign + - * / % или ^: ");
             inZnak = ch.nextLine();
         }
 
         while (inSecond <= 0) {
-            System.out.print("Введите второе число: ");
+            System.out.print("enter the second figure: ");
             inSecond = in2.nextInt();
         }
 
@@ -51,4 +49,3 @@ public class Calculator {
         System.out.println("Result: " + res);//почему-то при компиляции меня отругали за кириллицу именно в этом месте
     }
 }
-//в итоге компиляция прошла, но программа так и не запустилась в cmd, пишет Could not find or load main class main
