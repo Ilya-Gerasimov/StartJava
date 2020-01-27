@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        int first, second, res = 1;;
+        int first, second, res = 1;
         char sign;
 
         Scanner in = new Scanner(System.in);
