@@ -3,42 +3,40 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        int first, second, res = 1;
+        int firstNumber, secondNumber, res = 1;
         char sign;
 
         Scanner in = new Scanner(System.in); 
         
-        do{
+        do {
             System.out.print("enter the first figure: ");
-            first = in.nextInt();
-        }while(first <=0 );
+            firstNumber = in.nextInt();
+        } while(firstNumber <=0 );
 
-        do{
+        do {
             System.out.print("enter a sign + - * / % or ^: ");
-            String b = in.next();
-            sign = b.charAt(0);
-
-        }while(sign != '+' && sign != '-' && sign != '*'
+            sign = in.next().charAt(0);
+        } while(sign != '+' && sign != '-' && sign != '*'
                 && sign != '/' && sign != '%' && sign != '^');
 
-        do{
+        do {
             System.out.print("enter the second figure: ");
-            second = in.nextInt();
-        }while (second <= 0);
+            secondNumber = in.nextInt();
+        } while (secondNumber <= 0);
 
         if (sign == '+') {
-            res = first + second;
+            res = firstNumber + secondNumber;
         } else if (sign == '-') {
-            res = first - second;
+            res = firstNumber - secondNumber;
         } else if (sign == '*') {
-            res = first * second;
+            res = firstNumber * secondNumber;
         } else if (sign == '/') {
-            res = first / second;
+            res = firstNumber / secondNumber;
         } else if (sign == '%') {
-            res = first % second;
+            res = firstNumber % secondNumber;
         } else {
-            for (int i = 1; i <= second; i++) {
-                res *= first;
+            for (int i = 1; i <= secondNumber; i++) {
+                res *= firstNumber;
             }
         }
         System.out.println("Result: " + res);
