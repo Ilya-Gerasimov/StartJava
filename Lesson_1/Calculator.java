@@ -11,7 +11,7 @@ public class Calculator {
         do {
             System.out.print("enter the first figure: ");
             firstNumber = in.nextInt();
-        } while(firstNumber <=0 );
+        } while(firstNumber <= 0);
 
         do {
             System.out.print("enter a sign + - * / % or ^: ");
