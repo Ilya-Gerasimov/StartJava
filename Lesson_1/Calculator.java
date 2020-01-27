@@ -6,7 +6,7 @@ public class Calculator {
         int first, second, res = 1;
         char sign;
 
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);  
 
         do{
             System.out.print("enter the first figure: ");
