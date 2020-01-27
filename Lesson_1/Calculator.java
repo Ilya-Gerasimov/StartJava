@@ -4,7 +4,7 @@ public class Calculator {
 
     public static void main(String[] args) {
 
-        int inFirst = -1, inSecond = -1, res = 1;;
+        int inFirst = -1, inSecond = -1, res = 1;
         String inZnak = "p";
 
         Scanner in = new Scanner(System.in);
