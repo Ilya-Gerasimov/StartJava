@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.InputStreamReader;
 
 public class Calculator {
 
@@ -6,8 +7,8 @@ public class Calculator {
         int first, second, res = 1;
         char sign;
 
-        Scanner in = new Scanner(System.in);  
-
+        Scanner in = new Scanner(System.in); 
+        
         do{
             System.out.print("enter the first figure: ");
             first = in.nextInt();
@@ -15,24 +16,26 @@ public class Calculator {
 
         do{
             System.out.print("enter a sign + - * / % or ^: ");
-             sign = in.nextChar();
-        }while(!sign.equals("+") && !sign.equals("-") && !sign.equals("*")
-                && !sign.equals("/") && !sign.equals("%") && !sign.equals("^"));
+            String b = in.next();
+            sign = b.charAt(0);
+
+        }while(sign != '+' && sign != '-' && sign != '*'
+                && sign != '/' && sign != '%' && sign != '^');
 
         do{
             System.out.print("enter the second figure: ");
             second = in.nextInt();
         }while (second <= 0);
 
-        if (sign.equals("+")) {
+        if (sign == '+') {
             res = first + second;
-        } else if (sign.equals("-")) {
+        } else if (sign == '-') {
             res = first - second;
-        } else if (sign.equals("*")) {
+        } else if (sign == '*') {
             res = first * second;
-        } else if (sign.equals("/")) {
+        } else if (sign == '/') {
             res = first / second;
-        } else if (sign.equals("%")) {
+        } else if (sign == '%') {
             res = first % second;
         } else {
             for (int i = 1; i <= second; i++) {
