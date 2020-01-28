@@ -4,20 +4,20 @@ public class Cycle {
             System.out.println(i);
         }
 
-        int i = 6;
-        while (i >=-6 && i <= 6) {
-            System.out.println(i);
-            i -= 2;
+        int counter = 6;
+        while (counter >=-6 && counter <= 6) {
+            System.out.println(counter);
+            counter -= 2;
         }
 
-        i = 10; 
+        counter = 10; 
         int sum = 0;
         do {
-            if (i % 2 != 0) {
-                sum += i;
+            if (counter % 2 != 0) {
+                sum += counter;
             }
-            i++;
-        } while (i >= 10 && i <= 20);
+            counter++;
+        } while (counter >= 10 && counter <= 20);
         System.out.println(sum);
     }
 }
