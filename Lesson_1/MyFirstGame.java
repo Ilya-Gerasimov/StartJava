@@ -9,7 +9,7 @@ public class GuessNumber {
             yourNumber = in.nextInt();
             if (yourNumber > hiddenNumber) {
                 System.out.println("Введенное вами число больше того, что загадал компьютер");
-            } else if (yourNumber < hiddenNumber)  {
+            } else if (yourNumber < hiddenNumber) {
                 System.out.println("Введенное вами число меньше того, что загадал компьютер");
             }
         } while(yourNumber != hiddenNumber);
