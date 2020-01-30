@@ -1,7 +1,8 @@
 public class Person {
     String name = "Ilya";
     boolean isMale = true;
-    float height = 170.2f, weight = 80.1f;
+    float height = 170.2f;
+    float weight = 80.1f;
     int age = 49;
 
     void move() {
