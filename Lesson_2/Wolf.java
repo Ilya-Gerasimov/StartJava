@@ -29,14 +29,14 @@ public class Wolf {
         }
     }
 
-    public boolean getIsMale() {
+    public boolean isMale() {
         return isMale;
     }
 
     //Вот со следующим я долго думал. Если по умолчанию значение true то при вызове всегда будет true
     //и только при смене на false (при задании наших параметров) надо изменять переменную (чтобы получить
     //результат). Правильно? Мы же в объект не можем внести постоянные изменения.
-    void setIsMale(boolean isMale) {
+    void setMale(boolean isMale) {
         if(!isMale) {
             this.isMale = false;
         }

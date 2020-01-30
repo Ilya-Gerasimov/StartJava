@@ -6,9 +6,9 @@ public class WolfTest {
         wolfPolkan.setAge(5);
         wolfPolkan.setWeight(15.6f);
         wolfPolkan.setColor("бурого");
-        wolfPolkan.setIsMale(false);
+        wolfPolkan.setMale(false);
 
-        if(wolfPolkan.getIsMale()) {
+        if(wolfPolkan.isMale()) {
             System.out.println("Волк мужского пола.");
             System.out.println("Волк " + wolfPolkan.getName() + " " + wolfPolkan.getColor() + " окраса.");
             System.out.println("Его возраст " + wolfPolkan.getAge() + " лет, вес " + wolfPolkan.getWeight() + " кг.");
