@@ -13,7 +13,7 @@ public class Person {
     }
 
     boolean sit() {
-        System.out.println("Вы сели");
+        System.out.println("Вы сидите");
         return true;
     }
 
