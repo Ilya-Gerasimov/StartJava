@@ -2,11 +2,21 @@ public class WolfTest {
     
     public static void main(String[] args) {
         Wolf wolfPolkan = new Wolf();
-        wolfPolkan.name = "Bobik";
-        System.out.println("Кличка волка " + wolfPolkan.name);
-        System.out.println("Возраст волка " + wolfPolkan.age +" лет."+ " Вес волка " + wolfPolkan.weight + " кг.");
-        System.out.print("Сейчас ");
-        wolfPolkan.run();
-        wolfPolkan.hunts();
+        wolfPolkan.setName("Белка");
+        wolfPolkan.setAge(5);
+        wolfPolkan.setWeight(15.6f);
+        wolfPolkan.setColor("бурого");
+        wolfPolkan.setIsMale(false);
+
+        if(wolfPolkan.getIsMale()) {
+            System.out.println("Волк мужского пола.");
+            System.out.println("Волк " + wolfPolkan.getName() + " " + wolfPolkan.getColor() + " окраса.");
+            System.out.println("Его возраст " + wolfPolkan.getAge() +" лет, вес " + wolfPolkan.getWeight() + " кг.");
+        } else {
+            System.out.println("Волк оказался женского пола.");
+            System.out.println("Волчица " + wolfPolkan.getName() + " " + wolfPolkan.getColor() + " окраса.");
+            System.out.println("Её возраст " + wolfPolkan.getAge() +" лет, вес " + wolfPolkan.getWeight() + " кг.");
+        }
+
     }
 }
