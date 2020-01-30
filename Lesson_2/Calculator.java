@@ -35,8 +35,8 @@ public class Calculator {
                 break;
             case ('^'):
                 for (int i = 1; i <= secondNumber; i++) {
-                result *= firstNumber;
-            }
+                    result *= firstNumber;
+                }
                 break;
         }
         return result;

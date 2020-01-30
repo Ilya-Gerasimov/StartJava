@@ -5,11 +5,10 @@ public class CalculatorTest {
     public static void main(String[] args) {
         int firstNumber, secondNumber;
         char sign;
-        String answerUser = "yes";
-        String answer;
-
+        String answerUser;
         Scanner in = new Scanner(System.in);
-        answer = in.nextLine(); //тут работает
+
+        do {
             do {
                 System.out.print("Введите первое число: ");
                 firstNumber = in.nextInt();
@@ -31,7 +30,13 @@ public class CalculatorTest {
             result.setSecondNumber(secondNumber);
             result.setSign(sign);
             System.out.println("Результат: " + result.result());
-            System.out.print("Хотите продолжить? [да/нет]: ");
-            answer = in.nextLine();//тут не работает!
+            Scanner in1 = new Scanner(System.in); //пришлось задать новый объект in1, поскольку in в этом месте не работал?
+
+            do {
+                System.out.print("Хотите продолжить? [yes/no]: ");
+                answerUser = in1.nextLine();
+            } while(!answerUser.equals("yes") && !answerUser.equals("no"));
+
+        } while (answerUser.equals("yes"));
     }
 }
