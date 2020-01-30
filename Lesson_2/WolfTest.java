@@ -11,11 +11,11 @@ public class WolfTest {
         if(wolfPolkan.getIsMale()) {
             System.out.println("Волк мужского пола.");
             System.out.println("Волк " + wolfPolkan.getName() + " " + wolfPolkan.getColor() + " окраса.");
-            System.out.println("Его возраст " + wolfPolkan.getAge() +" лет, вес " + wolfPolkan.getWeight() + " кг.");
+            System.out.println("Его возраст " + wolfPolkan.getAge() + " лет, вес " + wolfPolkan.getWeight() + " кг.");
         } else {
             System.out.println("Волк оказался женского пола.");
             System.out.println("Волчица " + wolfPolkan.getName() + " " + wolfPolkan.getColor() + " окраса.");
-            System.out.println("Её возраст " + wolfPolkan.getAge() +" лет, вес " + wolfPolkan.getWeight() + " кг.");
+            System.out.println("Её возраст " + wolfPolkan.getAge() + " лет, вес " + wolfPolkan.getWeight() + " кг.");
         }
 
     }
