@@ -1,15 +1,6 @@
 public class JaegerTest {
 
     public static void main(String[] args) {
-        String modelName;
-        String mark;
-        String origin;
-        float height;
-        float weight;
-        int speed;
-        int strenght;
-        int armor;
-
         Jaeger gipsyDanger = new Jaeger();
         gipsyDanger.setModelName("Gipsy Danger");
         gipsyDanger.setMark("Mark-3");
