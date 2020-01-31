@@ -13,6 +13,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите первое число: ");
                 firstNumber = in.nextInt();
+                answerUser = in.nextLine();
             } while(firstNumber <= 0);
 
             result.setFirstNumber(firstNumber);
@@ -20,6 +21,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите знак математической операции: ");
                 sign = in.next().charAt(0);
+                answerUser = in.nextLine();
             } while(sign != '+' && sign != '-' && sign != '*'
                     && sign != '/' && sign != '%' && sign != '^');
 
