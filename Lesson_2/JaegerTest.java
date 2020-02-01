@@ -1,15 +1,7 @@
 public class JaegerTest {
 
     public static void main(String[] args) {
-        Jaeger gipsyDanger = new Jaeger();
-        gipsyDanger.setModelName("Gipsy Danger");
-        gipsyDanger.setMark("Mark-3");
-        gipsyDanger.setOrigin("USA");
-        gipsyDanger.setHeight(79.25f);
-        gipsyDanger.setWeight(1.980f);
-        gipsyDanger.setSpeed(7);
-        gipsyDanger.setStrenght(8);
-        gipsyDanger.setArmor(6);
+        Jaeger gipsyDanger = new Jaeger("Gipsy Danger", "Mark-3", "USA", 79.25f, 1.980f, 7, 8, 6);
 
         System.out.println("Робот " + gipsyDanger.getModelName() + " серии " + gipsyDanger.getMark() + " производства "
             + gipsyDanger.getOrigin() + " высотой " + gipsyDanger.getHeight() + " метров, весом " + gipsyDanger.getWeight() +
@@ -18,15 +10,7 @@ public class JaegerTest {
         gipsyDanger.drift();
         gipsyDanger.useVortexCannon();
 
-        Jaeger chernoAlfa = new Jaeger();
-        chernoAlfa.setModelName("Cherno Alfa");
-        chernoAlfa.setMark("Mark-1");
-        chernoAlfa.setOrigin("Russia");
-        chernoAlfa.setHeight(85.34f);
-        chernoAlfa.setWeight(2.412f);
-        chernoAlfa.setSpeed(3);
-        chernoAlfa.setStrenght(10);
-        chernoAlfa.setArmor(10);
+        Jaeger chernoAlfa = new Jaeger("Cherno Alfa", "Mark-1", "Russia", 85.34f, 2.412f, 3, 10, 10);
 
         System.out.println("Робот " + chernoAlfa.getModelName() + " серии " + chernoAlfa.getMark() + " производства "
             + chernoAlfa.getOrigin() + " высотой " + chernoAlfa.getHeight() + " метров, весом " + chernoAlfa.getWeight() +
