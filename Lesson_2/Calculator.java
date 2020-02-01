@@ -1,7 +1,7 @@
 public class Calculator {
     private int firstNumber;
     private int secondNumber;
-    private int calc = 1;
+    private int result = 1;
     private char sign;
 
     void setFirstNumber(int firstNumber) {
@@ -16,29 +16,29 @@ public class Calculator {
         this.sign = sign;
     }
 
-    public int result() {
+    public int calculate() {
         switch (sign) {
             case ('+'):
-                calc = firstNumber + secondNumber;
+                result = firstNumber + secondNumber;
                 break;
             case ('-'):
-                calc = firstNumber - secondNumber;
+                result = firstNumber - secondNumber;
                 break;
             case ('*'):
-                calc = firstNumber * secondNumber;
+                result = firstNumber * secondNumber;
                 break;
             case ('/'):
-                calc = firstNumber / secondNumber;
+                result = firstNumber / secondNumber;
                 break;
             case ('%'):
-                calc = firstNumber % secondNumber;
+                result = firstNumber % secondNumber;
                 break;
             case ('^'):
                 for (int i = 1; i <= secondNumber; i++) {
-                    calc *= firstNumber;
+                    result *= firstNumber;
                 }
                 break;
         }
-        return calc;
+        return result;
     }
 }

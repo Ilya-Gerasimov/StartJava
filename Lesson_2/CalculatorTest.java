@@ -34,7 +34,7 @@ public class CalculatorTest {
             } while (secondNumber <= 0);
 
             result.setSecondNumber(secondNumber);
-            System.out.println("Результат: " + result.result());
+            System.out.println("Результат: " + result.calculate());
  
             do {
                 System.out.print("Хотите продолжить? [yes/no]: ");
