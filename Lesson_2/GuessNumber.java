@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GuessNumber {
+class GuessNumber {
     private int hiddenNumber = (int)(Math.random() * 100);
     private int playerNumber;
     private Player gamer;
