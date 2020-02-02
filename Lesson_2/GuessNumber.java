@@ -14,7 +14,6 @@ class GuessNumber {
         Scanner in = new Scanner(System.in);
 
         do {
-
             if(choiceGamer == 1) {
                 gamer = gamer1;
                 choiceGamer = 2;
@@ -22,7 +21,6 @@ class GuessNumber {
                 gamer = gamer2;
                 choiceGamer = 1;
             }
-
             System.out.print(gamer.getName() + ", введите Ваше число: ");
             gamerNumber = in.nextInt();
             gamer.setNumber(gamerNumber);
