@@ -1,6 +1,8 @@
+package com.startjava.lesson_1.game;
+
 import java.util.Scanner;
 
-public class GuessNumber {
+public class MyFirstGame {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int hiddenNumber = 49, playerNumber;
