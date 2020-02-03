@@ -13,7 +13,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите первое число: ");
                 firstNumber = in.nextInt();
-                answerUser = in.nextLine();
+                //answerUser = in.nextLine();
             } while(firstNumber <= 0);
 
             result.setFirstNumber(firstNumber);
@@ -21,7 +21,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите знак математической операции: ");
                 sign = in.next().charAt(0);
-                answerUser = in.nextLine();
+                //answerUser = in.nextLine();
             } while(sign != '+' && sign != '-' && sign != '*'
                     && sign != '/' && sign != '%' && sign != '^');
 
@@ -30,7 +30,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите второе число: ");
                 secondNumber = in.nextInt();
-                answerUser = in.nextLine();
+                //answerUser = in.nextLine();
             } while (secondNumber <= 0);
 
             result.setSecondNumber(secondNumber);
@@ -38,7 +38,7 @@ public class CalculatorTest {
  
             do {
                 System.out.print("Хотите продолжить? [yes/no]: ");
-                answerUser = in.nextLine();
+                answerUser = in.next();
             } while(!answerUser.equals("yes") && !answerUser.equals("no"));
         } while (answerUser.equals("yes"));
     }
