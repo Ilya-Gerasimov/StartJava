@@ -37,9 +37,7 @@ public class Calculator {
                 result = firstNumber % secondNumber;
                 break;
             case ('^'):
-                for (i = 1; i <= secondNumber; i++) {
-                    result *= firstNumber;
-                }
+                result = (int) Math.pow(firstNumber, secondNumber);
                 break;
         }
         return result;
