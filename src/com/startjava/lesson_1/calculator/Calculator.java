@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        int firstNumber, secondNumber, res = 1;
-        char sign;
+        int firstNumber;
 
         Scanner in = new Scanner(System.in); 
         
@@ -15,17 +14,20 @@ public class Calculator {
             firstNumber = in.nextInt();
         } while(firstNumber <= 0);
 
+        char sign;
         do {
             System.out.print("enter a sign + - * / % or ^: ");
             sign = in.next().charAt(0);
         } while(sign != '+' && sign != '-' && sign != '*'
                 && sign != '/' && sign != '%' && sign != '^');
 
+        int secondNumber;
         do {
             System.out.print("enter the second figure: ");
             secondNumber = in.nextInt();
         } while (secondNumber <= 0);
 
+        int res = 1;
         if (sign == '+') {
             res = firstNumber + secondNumber;
         } else if (sign == '-') {
