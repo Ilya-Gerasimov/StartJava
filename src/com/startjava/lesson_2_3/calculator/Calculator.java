@@ -8,13 +8,7 @@ public class Calculator {
     }
 
     public int calculate() {
-        String[] mathExp = new String[3];
-        int i = 0;
-
-        for (String retval : mathExpression.split(" ")) {
-            mathExp[i] = retval;
-            i++;
-        }
+        String[] mathExp = mathExpression.split(" ");
 
         int firstNumber = Integer.parseInt(mathExp[0]);
         int secondNumber = Integer.parseInt(mathExp[2]);
