@@ -27,6 +27,6 @@ public class Calculator {
             case ('^'):
                 return (int) Math.pow(firstNumber, secondNumber);
         }
-        return firstNumber;
+            return 0;
     }
 }
