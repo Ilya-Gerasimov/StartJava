@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
     private String mathExpression;
@@ -13,27 +13,20 @@ public class Calculator {
         int firstNumber = Integer.parseInt(mathExp[0]);
         int secondNumber = Integer.parseInt(mathExp[2]);
         char sign = mathExp[1].charAt(0);
-        int result = 1;
         switch (sign) {
             case ('+'):
-                result = firstNumber + secondNumber;
-                break;
+                return firstNumber + secondNumber;
             case ('-'):
-                result = firstNumber - secondNumber;
-                break;
+                return firstNumber - secondNumber;
             case ('*'):
-                result = firstNumber * secondNumber;
-                break;
+                return firstNumber * secondNumber;
             case ('/'):
-                result = firstNumber / secondNumber;
-                break;
+                return firstNumber / secondNumber;
             case ('%'):
-                result = firstNumber % secondNumber;
-                break;
+                return firstNumber % secondNumber;
             case ('^'):
-                result = (int) Math.pow(firstNumber, secondNumber);
-                break;
+                return (int) Math.pow(firstNumber, secondNumber);
         }
-        return result;
+        return firstNumber;
     }
 }
