@@ -5,7 +5,7 @@ import java.util.Arrays;
 class Player {
     private String name;
     private int number;
-    private int count;
+    private int count = -1;
     private int[] numbers = new int[5];
 
     public Player(String name) {
@@ -16,9 +16,9 @@ class Player {
         return name;
     }
 
-    void setNumber(int number, int count) {
+    void setNumber(int number) {
         this.number = number;
-        this.count = count;
+        count += 1;
         numbers[count] = number;
     }
 
@@ -36,5 +36,6 @@ class Player {
 
     void clearTabNumbers() {
         Arrays.fill(numbers, 0, (getCount() + 1), 0);
+        count = -1;
     }
 }
