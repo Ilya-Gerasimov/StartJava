@@ -35,7 +35,7 @@ class Player {
     }
 
     void clearTabNumbers() {
-        Arrays.fill(numbers, 0, (getCount() + 1), 0);
+        Arrays.fill(numbers, 0, (count + 1), 0);
         count = -1;
     }
 }
