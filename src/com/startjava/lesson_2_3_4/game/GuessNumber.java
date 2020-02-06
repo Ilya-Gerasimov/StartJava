@@ -14,19 +14,19 @@ class GuessNumber {
     }
 
     public void start() {
-        int gamerNumber =0;
+        int currentNumber = 0;
         currentPlayer = gamer1;
-        int hiddenNumber = (int)(Math.random() * 101);
+        int hiddenNumber = (int) (Math.random() * 101);
         int counter = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("У Вас 10 попыток!");
         do {
             System.out.print(currentPlayer.getName() + ", введите Ваше число: ");
-            gamerNumber = in.nextInt();
-            currentPlayer.setNumber(gamerNumber);
-            if (gamerNumber > hiddenNumber) {
+            currentNumber = in.nextInt();
+            currentPlayer.setNumber(currentNumber);
+            if (currentNumber > hiddenNumber) {
                 System.out.println("Введенное вами число больше того, что загадал компьютер");
-            } else if (gamerNumber < hiddenNumber) {
+            } else if (currentNumber < hiddenNumber) {
                 System.out.println("Введенное вами число меньше того, что загадал компьютер");
             } else {
                 System.out.println("Вы угадали число!");
@@ -34,24 +34,24 @@ class GuessNumber {
                         " с " + (currentPlayer.getCount() + 1) + " попытки");
             }
             counter += 1;
-            if(counter == 10) {
+            if (counter == 10) {
                 System.out.println("У " + currentPlayer.getName() + " закончились попытки");
             }
             currentPlayer = (currentPlayer == gamer1) ? gamer2 : gamer1;
-        } while(gamerNumber != hiddenNumber && counter != 10);
+        } while (currentNumber != hiddenNumber && counter != 10);
 
         printNumbers(gamer1);
         printNumbers(gamer2);
-        gamer1.clearTabNumbers();
-        gamer2.clearTabNumbers();
+        gamer1.clear();
+        gamer2.clear();
     }
 
     private void printNumbers(Player gamer) {
-        int[] printTab = new int[5];
-        printTab = Arrays.copyOf(gamer.getNumbers(), (gamer.getCount()+1));
+        int[] numbers = new int[5];
+        numbers = Arrays.copyOf(gamer.getNumbers(), (gamer.getCount() + 1));
         System.out.println("Введённые числа игрока " + gamer.getName());
-        for(int i = 0; i <= gamer.getCount(); i++) {
-            System.out.print(printTab[i] + " ");
+        for (int i = 0; i <= gamer.getCount(); i++) {
+            System.out.print(numbers[i] + " ");
         }
         System.out.println();
     }

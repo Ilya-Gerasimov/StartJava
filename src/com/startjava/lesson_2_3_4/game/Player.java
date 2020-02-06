@@ -5,7 +5,7 @@ import java.util.Arrays;
 class Player {
     private String name;
     private int number;
-    private int count = -1;
+    private int countAttempts = -1;
     private int[] numbers = new int[5];
 
     public Player(String name) {
@@ -18,8 +18,8 @@ class Player {
 
     void setNumber(int number) {
         this.number = number;
-        count += 1;
-        numbers[count] = number;
+        countAttempts += 1;
+        numbers[countAttempts] = number;
     }
 
     public int getNumber() {
@@ -27,15 +27,15 @@ class Player {
     }
 
     public int getCount() {
-        return count;
+        return countAttempts;
     }
 
     public int[] getNumbers() {
         return numbers;
     }
 
-    void clearTabNumbers() {
-        Arrays.fill(numbers, 0, (count + 1), 0);
-        count = -1;
+    void clear() {
+        Arrays.fill(numbers, 0, (countAttempts + 1), 0);
+        countAttempts = -1;
     }
 }
