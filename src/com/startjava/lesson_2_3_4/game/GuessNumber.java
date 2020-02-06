@@ -22,7 +22,7 @@ class GuessNumber {
         do {
             currentPlayer = (currentPlayer == gamer2) ? gamer1 : gamer2;
             enterNumber();
-        } while (checkNumber() && gamer2.getCount() < 4);
+        } while (checkNumber() && checkAttempts());
         printNumbers(gamer1);
         printNumbers(gamer2);
         gamer1.clear();
@@ -39,24 +39,27 @@ class GuessNumber {
     private boolean checkNumber() {
         if (currentNumber > hiddenNumber) {
             System.out.println("Введенное вами число больше того, что загадал компьютер");
-            checkAttempts();
             return true;
         } else if (currentNumber < hiddenNumber) {
             System.out.println("Введенное вами число меньше того, что загадал компьютер");
-            checkAttempts();
             return true;
         } else {
             System.out.println("Вы угадали число!");
             System.out.println("Игрок " + currentPlayer.getName() + " закончил игру угадав число " + currentPlayer.getNumber() +
                     " с " + (currentPlayer.getCount() + 1) + " попытки");
-            checkAttempts();
             return false;
         }
     }
 
-    private void checkAttempts() {
-        if (currentPlayer.getCount() == 4) {
-            System.out.println("У игрока " + currentPlayer.getName() + " закончились попытки");
+    private boolean checkAttempts() {
+        if (gamer1.getCount() == 4 && gamer2.getCount() < 4) {
+            System.out.println("У игрока " + gamer1.getName() + " закончились попытки");
+            return true;
+        } else if (gamer2.getCount() == 4) {
+            System.out.println("У игрока " + gamer2.getName() + " закончились попытки");
+            return false;
+        } else {
+            return true;
         }
     }
 
