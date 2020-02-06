@@ -18,7 +18,7 @@ class Player {
 
     void setNumber(int number) {
         this.number = number;
-        countAttempts ++;
+        countAttempts++;
         numbers[countAttempts] = number;
     }
 
